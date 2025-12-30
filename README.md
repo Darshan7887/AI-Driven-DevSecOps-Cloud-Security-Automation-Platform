@@ -1,38 +1,18 @@
-# AI-Driven DevSecOps & Cloud Security Automation Platform
+# 🔐 AI-Driven DevSecOps & Cloud Security Automation Platform
 
-## Overview
-This project simulates an enterprise-grade DevSecOps platform that integrates security controls directly into the CI/CD pipeline.  
-It demonstrates how modern cloud-native teams embed security *by design*, not as an afterthought.
+An end-to-end **security-first DevSecOps platform** that integrates CI/CD security scanning, cloud misconfiguration detection, AI-based risk analysis, and compliance-ready reporting — designed to simulate **real enterprise security workflows** used in fintech, BFSI, and SaaS environments.
 
-## Phase 4 Focus
-DevSecOps & Cloud Security Automation
+---
 
-## Implemented Components (So Far)
+## 🚀 What This Platform Does
+- 🔁 Embeds **security into CI/CD** (SAST, dependency, container scans)
+- ☁️ Scans **cloud infrastructure configs** for high-risk misconfigurations (simulated, safe)
+- 🤖 Uses **AI logic** to normalize findings, reduce noise, explain risk, and prioritize fixes
+- 📊 Generates **technical + executive security reports**
+- ❌ **Automatically blocks the pipeline** on critical risks (intentional & correct behavior)
 
-### 1. Secure CI/CD Security Scans
-- Static Application Security Testing (SAST)
-- Dependency Vulnerability Scanning (Supply Chain Security)
-- Container Image Security Scanning
+---
 
-### 2. Risk Gate (Policy-Based Decision Engine)
-- Severity-based risk evaluation
-- Pipeline decisions: PASS / WARN / FAIL
-- Enterprise-aligned security thresholds
-
-## Design Principles
-- Shift-left security
-- Risk-based decisions (not noise-based)
-- Automation-first
-- AI-ready structured outputs
-- Interview-explainable architecture
-
-## Tech Stack
-- Python
-- Bash
-- GitHub Actions (to be wired)
-- Docker & Kubernetes (later stages)
-- JSON / YAML
-
-## Status
-🚧 In Progress — Pipeline orchestration and AI risk analysis coming next
-
+## ▶️ Run the Entire Platform (One Command)
+```bash
+./run.sh
