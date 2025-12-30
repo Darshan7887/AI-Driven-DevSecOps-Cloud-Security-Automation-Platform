@@ -1,0 +1,29 @@
+{
+  "security_groups": [
+    {
+      "name": "web-sg",
+      "inbound_rules": [
+        {
+          "port": 22,
+          "cidr": "0.0.0.0/0"
+        },
+        {
+          "port": 80,
+          "cidr": "0.0.0.0/0"
+        }
+      ]
+    }
+  ],
+  "storage_buckets": [
+    {
+      "name": "app-user-data",
+      "public": true
+    }
+  ],
+  "iam_policies": [
+    {
+      "name": "admin-like-policy",
+      "permissions": ["*"]
+    }
+  ]
+}

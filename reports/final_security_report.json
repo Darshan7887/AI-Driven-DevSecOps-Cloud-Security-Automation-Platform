@@ -1,0 +1,79 @@
+{
+  "report_type": "Security Risk Assessment",
+  "generated_at": "2025-12-30T07:51:38.691958",
+  "executive_summary": "Security analysis identified 4 critical and 4 high-risk issues requiring immediate attention. If left unresolved, these issues may lead to unauthorized access, data exposure, or full system compromise.",
+  "technical_findings": [
+    {
+      "issue": "Hardcoded Password",
+      "severity": "CRITICAL",
+      "affected_resources": 1,
+      "risk_explanation": "Secrets stored in code are easily exposed via source control",
+      "recommended_action": "Move secrets to environment variables or a secrets manager.",
+      "owasp_category": "A2: Cryptographic Failures"
+    },
+    {
+      "issue": "Use of eval()",
+      "severity": "HIGH",
+      "affected_resources": 1,
+      "risk_explanation": "eval() enables arbitrary code execution if input is untrusted",
+      "recommended_action": "Avoid eval(). Use safe parsing or explicit logic.",
+      "owasp_category": "A3: Injection"
+    },
+    {
+      "issue": "flask",
+      "severity": "HIGH",
+      "affected_resources": 1,
+      "risk_explanation": "Multiple security issues including information disclosure",
+      "recommended_action": "Review and remediate according to security best practices.",
+      "owasp_category": "Not mapped"
+    },
+    {
+      "issue": "requests",
+      "severity": "CRITICAL",
+      "affected_resources": 1,
+      "risk_explanation": "Authorization bypass vulnerability",
+      "recommended_action": "Review and remediate according to security best practices.",
+      "owasp_category": "Not mapped"
+    },
+    {
+      "issue": "openssl",
+      "severity": "HIGH",
+      "affected_resources": 1,
+      "risk_explanation": "Buffer overflow vulnerability in OpenSSL",
+      "recommended_action": "Review and remediate according to security best practices.",
+      "owasp_category": "Not mapped"
+    },
+    {
+      "issue": "bash",
+      "severity": "MEDIUM",
+      "affected_resources": 1,
+      "risk_explanation": "Improper handling of environment variables",
+      "recommended_action": "Review and remediate according to security best practices.",
+      "owasp_category": "Not mapped"
+    },
+    {
+      "issue": "SSH open to the internet",
+      "severity": "CRITICAL",
+      "affected_resources": 1,
+      "risk_explanation": "Exposes SSH to brute-force and remote exploitation",
+      "recommended_action": "Restrict SSH access to trusted IP ranges or use bastion hosts.",
+      "owasp_category": "A5: Security Misconfiguration"
+    },
+    {
+      "issue": "Public storage bucket",
+      "severity": "HIGH",
+      "affected_resources": 1,
+      "risk_explanation": "Public buckets can leak sensitive data",
+      "recommended_action": "Disable public access and use IAM-based access controls.",
+      "owasp_category": "A5: Security Misconfiguration"
+    },
+    {
+      "issue": "Over-permissive IAM policy",
+      "severity": "CRITICAL",
+      "affected_resources": 1,
+      "risk_explanation": "Wildcard permissions allow full account compromise",
+      "recommended_action": "Apply least-privilege permissions instead of wildcards.",
+      "owasp_category": "A5: Security Misconfiguration"
+    }
+  ]
+}
